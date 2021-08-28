@@ -1,0 +1,50 @@
+body {
+    font-family: Roboto, Lucida, Helvetica, Univers, sans-serif;
+    margin: 0;
+}
+
+p {
+    margin: 20px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-head {
+    background-color: black;
+    color: white;
+    height: 48px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.main-logo {
+    margin-left: 32px;
+}
+
+.sub-head {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.entry {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 24px;
+}
+
+.date {
+    color: #AAA;
+    font-size: smaller;
+}
+
+.not-latest {
+    color: red;
+    font-size: smaller;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+  <body>
+    <div class="main-head">
+      <div style="padding-left:20px">It Depends...</div>
+    </div>
+    <div class="sub-head">
+      <a href="/">Index</a>
+    </div>
+    <div class="sub-head">
+      Artefact <a href="/group/{{&artefact.groupId}}">{{&artefact.groupId}}</a>:{{&artefact.artefactId}}
+    </div>
+{{#artefact.versions}}
+    <div class="entry">
+      <a href="/version/{{&groupId}}/{{&artefactId}}/{{&versionId}}">{{&groupId}}:{{&artefactId}}:{{&versionId}}</a>
+      <span class="date">{{&date}} {{&time}}</span>
+    </div>
+{{/artefact.versions}}
+  </body>
+</html>

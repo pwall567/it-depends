@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+  <body>
+    <div class="main-head">
+      <div style="padding-left:20px">It Depends...</div>
+    </div>
+    <div class="sub-head">
+      <a href="/">Index</a>
+    </div>
+    <div class="sub-head">
+      Version
+      <a href="/group/{{&version.groupId}}">{{&version.groupId}}</a>:<a href="/artefact/{{&version.groupId}}/{{&version.artefactId}}">{{&version.artefactId}}</a>:{{&version.versionId}}
+      <span class="date">{{&version.date}} {{&version.time}}</span>
+    </div>
+    <div class="sub-head">
+      Depends on:
+    </div>
+{{#version.dependencies}}
+    <div class="entry">
+      <a href="/version/{{&groupId}}/{{&artefactId}}/{{&versionId}}">{{&groupId}}:{{&artefactId}}:{{&versionId}}</a>
+      {{^latest}} <span class="not-latest">(Not Latest)</span>{{/latest}}
+    </div>
+{{/version.dependencies}}
+{{^version.dependencies}}
+    <div class="entry">Nothing</div>
+{{/version.dependencies}}
+    <div class="sub-head">
+      Depended on by:
+    </div>
+{{#dependedOn}}
+    <div class="entry">
+      <a href="/version/{{&groupId}}/{{&artefactId}}/{{&versionId}}">{{&groupId}}:{{&artefactId}}:{{&versionId}}</a>
+    </div>
+{{/dependedOn}}
+{{^dependedOn}}
+    <div class="entry">Nothing</div>
+{{/dependedOn}}
+  </body>
+</html>

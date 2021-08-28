@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+  <body>
+    <div class="main-head">
+      <div style="padding-left:20px">It Depends...</div>
+    </div>
+    <div class="sub-head">
+      <a href="/">Index</a>
+    </div>
+    <div class="sub-head">
+      Group {{&group.groupId}}
+    </div>
+{{#group.artefacts}}
+    <div class="entry"><a href="/artefact/{{&groupId}}/{{&artefactId}}">{{&groupId}}:{{&artefactId}}</a></div>
+{{/group.artefacts}}
+  </body>
+</html>
